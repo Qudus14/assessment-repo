@@ -28,11 +28,16 @@ export function fetchRestaurants(filters?: {
   });
 }
 
-export function toggleFavorite(restaurantId: string): Promise<{ success: boolean }> {
+export function toggleFavorite(
+  restaurantId: string
+): Promise<{ success: boolean }> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      console.log(`Toggling favorite for ${restaurantId}`);
+
       const failed = Math.random() < 0.2;
-      if (failed) reject(new Error('Network error'));
+
+      if (failed) reject(new Error("Network error"));
       else resolve({ success: true });
     }, 500);
   });

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { toggleFavorite } from '../services/mock-api';
-import type { Restaurant } from '../types';
 
 // --- FavoriteButton.tsx ---
 export function FavoriteButton({ restaurantId, initialFavorited = false }: { restaurantId: string, initialFavorited?: boolean }) {
